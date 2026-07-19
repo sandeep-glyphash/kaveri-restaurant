@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  /* stone-50 */
+  --foreground: #1c1917;
+  /* stone-900 */
+
+  /* Kaveri Brand Colors */
+  --accent-gold: #d4af37;
+  --accent-light: #f9e29c;
+  --accent-dark: #b8860b;
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Map Tailwind font utilities to Next.js font variables */
+.font-sans {
+  font-family: var(--font-jost), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.font-serif {
+  font-family: var(--font-playfair), ui-serif, Georgia, serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+/* Custom Utilities */
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f9e29c 50%, #d4af37 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #d4af37 0%, #f9e29c 50%, #d4af37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-amber-dark {
+  color: #b45309 !important;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+.font-playfair-italic {
+  font-family: var(--font-playfair), serif !important;
+  font-style: italic !important;
+}
+
+/* Animations */
+@keyframes kenBurnsEffect {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.1) translate(-2%, -2%);
+  }
+
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsEffect 15s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
